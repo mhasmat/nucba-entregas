@@ -1,0 +1,67 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* bg colors */
+  --background: #02050e;
+  --primary: #1e50ff;
+  --secondary: #272d37;
+  --btn-bg: #050d26;
+  --bg-azul-10: #e9eeff;
+  --bg-white: #fff;
+  --bg-electric: #f0fbff;
+  --nav-bg: #0f1525;
+
+  /* text colors */
+  --text-gray: #adb9c7;
+  --text-white: #f3f4f6;
+
+  /* decoration */
+  --fire: #ff6d00;
+  --electric: #64d3ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  background: var(--secondary);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+  padding: 0 30px 0 30px;
+  position: fixed;
+  top: 0;
+}
+
+.logo {
+  width: 24vh;
+}
+
+.navbar,
+.navbar-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar {
+  gap: 150px;
+}
+
+.navbar-list {
+  gap: 25px;
+}
+
+.navbar-list a {
+  color: var(--text-white);
+  font-size: 16px;
+}

@@ -1,0 +1,163 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* bg colors */
+  --background: #02050e;
+  --primary: #1e50ff;
+  --secondary: #272d37;
+  --btn-bg: #050d26;
+  --bg-azul-10: #e9eeff;
+  --bg-white: #fff;
+  --bg-electric: #f0fbff;
+  --nav-bg: #0f1525;
+
+  /* text colors */
+  --text-gray: #adb9c7;
+  --text-white: #f3f4f6;
+  --text-gold: #e7ff13;
+
+  /* decoration */
+  --fire: #ff6d00;
+  --electric: #64d3ff;
+}
+
+/* selector universal */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* header */
+header {
+  background: var(--secondary);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+  padding: 0 30px;
+  box-shadow: rgba(92, 167, 243, 0.8) 0px 8px 24px;
+  position: fixed;
+  top: 0;
+}
+
+.logo-nav {
+  width: 24vh;
+}
+
+.navbar,
+.navbar-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar {
+  gap: 150px;
+}
+
+.navbar-list {
+  gap: 25px;
+}
+
+.navbar-list a {
+  color: var(--text-gray);
+  font-size: 14px;
+}
+
+.navbar-list li:first-child > a {
+  color: var(--text-white);
+  font-weight: 600;
+}
+
+/* main */
+main {
+  background: var(--background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: #fff;
+}
+
+#hero {
+  margin-top: 75px;
+  padding: 70px 0;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+}
+
+.hero-info h1 {
+  font-size: 48px;
+  width: 80%;
+  min-width: 500px;
+  font-weight: 800;
+  color: var(--text-white);
+}
+
+.hero-info p {
+  font-size: 14px;
+  width: 70%;
+  color: var(--text-gray);
+}
+
+.hero-info p > span {
+  font-weight: 800;
+}
+
+#botones-hero {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero-info #btn-call {
+  color: var(--text-white);
+  background-color: var(--primary);
+  width: 170px;
+  padding: 8px 0;
+  border-radius: 20px;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.hero-info #btn-learn {
+  color: var(--text-white);
+  border: 3px solid var(--text-white);
+  width: 170px;
+  padding: 8px 0;
+  border-radius: 20px;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* hero card */
+.hero-card {
+  width: 300px;
+  background: rgba(92, 167, 243, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  height: 300px;
+}

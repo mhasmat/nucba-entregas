@@ -161,3 +161,39 @@ main {
   gap: 20px;
   height: 300px;
 }
+
+/* masInfo */
+
+#masInfo {
+  height: 350px;
+  margin-top: 50px;
+  margin-bottom: 160px;
+  padding: 70px 0;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3662ff38;
+  border-radius: 150px 5px;
+}
+
+.descripcion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 90%;
+  height: 100%;
+  background: rgba(92, 168, 243, 0.041);
+  border-radius: 100px 5px;
+}
+
+.descripcion p {
+  font-size: 18px;
+  padding: 10px 30px;
+  color: var(--text-white);
+}
+
+span {
+  font-weight: 600;
+}

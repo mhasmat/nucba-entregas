@@ -44,6 +44,7 @@ header {
   box-shadow: rgba(92, 167, 243, 0.8) 0px 8px 24px;
   position: fixed;
   top: 0;
+  z-index: 1;
 }
 
 .logo-nav {
@@ -75,6 +76,17 @@ header {
   font-weight: 600;
 }
 
+/* menú hamburguesa */
+.navbar i {
+  font-size: 36px;
+  display: none;
+}
+
+#toggle-menu {
+  display: none;
+}
+/* -------------- */
+
 /* main */
 main {
   background: var(--background);
@@ -87,62 +99,61 @@ main {
 }
 
 #hero {
-  margin-top: 75px;
-  padding: 70px 0;
-  max-width: 1200px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 70px 0;
+  margin-top: 75px;
+  width: 90%;
+  justify-content: space-around;
 }
 
 .hero-info {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  width: 50%;
+  justify-content: center;
+  gap: 40px;
 }
 
 .hero-info h1 {
+  font-weight: 800;
   font-size: 48px;
   width: 80%;
-  min-width: 500px;
-  font-weight: 800;
   color: var(--text-white);
 }
 
 .hero-info p {
-  font-size: 14px;
-  width: 70%;
+  font-weight: 500;
+  font-size: 17px;
+  max-width: 350px;
   color: var(--text-gray);
 }
 
 .hero-info p > span {
   font-weight: 800;
+  color: var(--text-white);
 }
 
-#botones-hero {
+.botones-hero {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   gap: 20px;
 }
 
-.hero-info #btn-call {
+#btn-call {
   color: var(--text-white);
   background-color: var(--primary);
   width: 170px;
-  padding: 8px 0;
+  padding: 8px 15px;
   border-radius: 20px;
   font-size: 14px;
   text-align: center;
   font-weight: 600;
 }
 
-.hero-info #btn-learn {
+#btn-learn {
   color: var(--text-white);
   border: 3px solid var(--text-white);
   width: 170px;
-  padding: 8px 0;
+  padding: 8px 15px;
   border-radius: 20px;
   font-size: 14px;
   text-align: center;
@@ -151,7 +162,7 @@ main {
 
 /* hero card */
 .hero-card {
-  width: 300px;
+  width: 350px;
   background: rgba(92, 167, 243, 0.1);
   padding: 20px;
   border-radius: 15px;
@@ -159,28 +170,29 @@ main {
   flex-direction: column;
   justify-content: center;
   gap: 20px;
-  height: 300px;
+  height: 360px;
 }
 
-/* masInfo */
+.logo-hero {
+  width: 100%;
+}
 
-#masInfo {
-  height: 350px;
-  margin-top: 50px;
-  margin-bottom: 160px;
-  padding: 70px 0;
-  max-width: 1200px;
+/* about */
+
+#about {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 850px;
+  padding: 70px 0;
+  margin-top: 50px;
+  margin-bottom: 100px;
   background-color: #3662ff38;
   border-radius: 150px 5px;
 }
 
 .descripcion {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   text-align: center;
   width: 90%;
   height: 100%;
@@ -196,4 +208,65 @@ main {
 
 span {
   font-weight: 600;
+}
+
+/* media queries */
+@media (max-width: 992px) {
+  .hero-info {
+    text-align: center;
+    width: 90%;
+    align-items: center;
+  }
+
+  .hero-info h1 {
+    display: block;
+    width: 100%;
+  }
+
+  .hero-info p {
+    max-width: 80%;
+    font-size: 20px;
+  }
+
+  .botones-hero {
+    justify-content: center;
+  }
+
+  .hero-card {
+    display: none;
+  }
+
+  #about {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar ul {
+    background-color: var(--btn-bg);
+    width: 100%;
+    height: calc(100vh - 75px);
+    position: absolute;
+    top: 75px;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(200%);
+    transition: all 0.4s ease-out;
+  }
+
+  .navbar i {
+    display: block;
+    color: var(--bg-white);
+  }
+
+  #toggle-menu:checked ~ .navbar-list {
+    transform: translateX(0%);
+    transition: all 0.4s ease-in;
+  }
+
+  .hero-info p {
+    max-width: 100%;
+  }
 }

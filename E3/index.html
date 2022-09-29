@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><mh/> { DeV } Home</title>
     <link rel="stylesheet" href="assets/style.css" />
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <header>
@@ -13,6 +21,10 @@
         ><img src="assets/img/logo_mhDev.png" alt="logo mhdev" class="logo-nav"
       /></a>
       <nav class="navbar">
+        <!-- menú hamburguesa -->
+        <label for="toggle-menu"><i class="fas fa-bars"></i></label>
+        <input type="checkbox" name="" id="toggle-menu" />
+
         <ul class="navbar-list">
           <li><a href="#services">Servicios</a></li>
           <li><a href="#works">Trabajos</a></li>
@@ -24,22 +36,24 @@
     <main>
       <!-- hero o portada -->
       <section id="hero">
+        <!-- "hero-presentation" -->
         <div class="hero-info">
           <h1>Aplicaciones Web a Tu Medida.</h1>
-          <p id="hero-p">
+          <p>
             Dale a tu empresa el impulso de la tecnología digital. Encontrá
             soluciones a tu medida con <span> < mh />{ DeV } </span>.
           </p>
-          <div id="botones-hero">
-            <a href="#" id="btn-call">CONTACTAR</a>
-            <a href="#" id="btn-learn">+ INFO</a>
+          <!-- "button-container" -->
+          <div class="botones-hero">
+            <a href="#" id="btn-call" class="primary-btn">CONTACTAR</a>
+            <a href="#" id="btn-learn" class="alt-btn">+ INFO</a>
           </div>
         </div>
         <div class="hero-card">
           <img src="assets/img/config.png" alt="" class="logo-hero" />
         </div>
       </section>
-      <section id="masInfo">
+      <section id="about">
         <div class="descripcion">
           <p>
             Implementando <span>Desarrollo Web</span> para todo tipo de empresas

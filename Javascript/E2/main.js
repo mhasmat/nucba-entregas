@@ -103,20 +103,24 @@ const checkInputOption = () => {
 
   const inputValue = numberInput.value;
 
+  //buscar pizza x id
+  const buscaPizza = pizzas.find((pizza) => {
+    return pizza.id == inputValue;
+  });
+
   if (isEmpty(inputValue)) {
     return (renderResultado.innerHTML = `<h3>Elija una opción</h3>`);
   } else if (!opcionValida(inputValue)) {
     return (renderResultado.innerHTML = `<h3>Opción no válida</h3>`);
-  } else {
+  } else if (buscaPizza) {
     valid = true;
-    pizzas.find((pizza) => {
-      renderResultado.innerHTML = `<h3>Opción: ${pizza.id}</h3>
-                                  <h2> ${pizza.nombre}</h2>
-                                  <h3> ${pizza.precio}</h3>`;
-    });
-  }
 
-  return valid;
+    renderResultado.innerHTML = `<h3>Opción: ${buscaPizza.id}</h3>
+                                <h2> ${buscaPizza.nombre}</h2>
+                                <h3> $${buscaPizza.precio}</h3>`;
+
+    return valid;
+  }
 };
 
 const isEmpty = (value) => !value.length;
